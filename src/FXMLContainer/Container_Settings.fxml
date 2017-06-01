@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2017 kilian
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLContainer.Container_SettingsController">
+    <children>
+        <HBox alignment="CENTER_LEFT">
+            <children>
+                <VBox>
+                    <children>
+                        <CheckBox fx:id="cb_AllowCPU" mnemonicParsing="false" onAction="#cb_AllowCPU_onAction" text="Allow CPU Rendering">
+                            <VBox.margin>
+                                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                            </VBox.margin>
+                        </CheckBox>
+                        <Slider fx:id="slider_MaxPerformance" blockIncrement="1.0" disable="true" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="14.0" prefWidth="272.0" showTickMarks="true" snapToTicks="true">
+                            <VBox.margin>
+                                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                            </VBox.margin>
+                        </Slider>
+                        <Label fx:id="lbl_MaxUsage" text="Maximum CPU Usage: XX%">
+                            <VBox.margin>
+                                <Insets bottom="7.0" left="7.0" right="7.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </VBox>
+            <FlowPane fx:id="vbox_Cards" alignment="CENTER" prefWrapLength="200.0" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+      <Button fx:id="btnRefreshTasks" mnemonicParsing="false" onAction="#btnRefreshTasks_onAction" text="Refresh Tasks (Reset Rendered Frames)" wrapText="true">
+         <VBox.margin>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </VBox.margin>
+      </Button>
+    </children>
+</VBox>

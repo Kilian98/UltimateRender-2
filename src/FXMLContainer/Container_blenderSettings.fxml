@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2017 kilian
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLContainer.Container_blenderSettingsController">
+   <children>
+      <CheckBox fx:id="cb_AdjustRenderSettings" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#cb_AdjustRenderSettings_onAction" text="Adjust Blender Rendering Settings" />
+      <TextField fx:id="tb_startFrame" disable="true" layoutX="96.0" layoutY="43.0" prefHeight="25.0" prefWidth="95.0" promptText="Start Frame" />
+      <TextField fx:id="tb_EndFrame" disable="true" layoutX="291.0" layoutY="43.0" prefHeight="25.0" prefWidth="95.0" promptText="End Frame" />
+      <Label layoutX="14.0" layoutY="47.0" text="Start Frame" />
+      <Label layoutX="206.0" layoutY="47.0" text="Start Frame" />
+      <Label layoutX="14.0" layoutY="88.0" text="Destination" />
+      <TextField fx:id="tb_destination" disable="true" layoutX="85.0" layoutY="84.0" prefHeight="25.0" prefWidth="295.0" promptText="Start Frame" />
+      <Label layoutX="392.0" layoutY="88.0" text="Image Format" />
+      <ChoiceBox fx:id="cb_imageFormat" disable="true" layoutX="490.0" layoutY="84.0" prefHeight="25.0" prefWidth="95.0" />
+      <Label fx:id="lbl_Renderer" layoutX="20.0" layoutY="125.0" text="Renderer: (unknown)" />
+   </children>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</AnchorPane>
